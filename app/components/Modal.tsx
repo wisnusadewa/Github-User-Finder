@@ -21,12 +21,12 @@ export default function Modal({desc}: any) {
          {
             modal ? 
             <> 
-            <IsiModal closeModal={closeModal} desc={desc}/>
+            <IsiModal closeModal={() => closeModal()} desc={desc}/>
             </>           
             
             :
             <button
-            onClick={showModal} 
+            onClick={()=> showModal()} 
             className='text-black bg-white text-[10px] px-2 py-1 rounded-md md:text-md lg:text-lg xl:text-md'
             >Description</button>
 
